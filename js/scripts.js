@@ -18,19 +18,14 @@ Ticket.prototype.calculation = function(age, time, price) {
   var ticketCost = 0;
   if (age <= 17){
     price -= 5;
-    console.log(1);
   }else if ((age >= 18) && (age <= 64)){
     price;
-    console.log(2);
   }else {
     price -= 7;
-    console.log(3);
   }if (time === 1) {
     price -= 2;
-    console.log("matinee");
   }else {
     price;
-    console.log("notmatinee");
   }return ticketCost += price;
 }
 function resetFields() {
@@ -41,7 +36,8 @@ function resetFields() {
 //User Interface Logic
 $(document).ready(function(){
   $("#ticketInput").submit(function(event){
-    debugger;
+    $("#ticketInput").hide();
+    $("#panel").show();
     var nameInput = $("input#name").val();
     var ageInput = parseInt($("input#age").val());
     var titleInput = $("#movie-title").val();
