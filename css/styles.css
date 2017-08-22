@@ -1,5 +1,4 @@
 container {
-  background-image: url("../img/background2.jpg");
   text-align: center;
 }
 .input {
@@ -40,6 +39,19 @@ button {
   color: #b9271c;
 }
 .panel {
+  width: 88%;
+  text-align: center;
+  font-size: 3rem;
+  color: #b9271c;
+}
+.panel-body {
   background-image: url("../img/filmborder.jpg");
   background-position-x: center;
+  height: 22rem;
+  text-align: right;
+  background-repeat: no-repeat;
+  padding: center;
+  color: #ccc;
+  font-size: 3rem;
+
 }
