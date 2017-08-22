@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <meta charset="utf-8">
+    <title>Movie Tickets</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Epic Ticket Kiosk</h1>
+      <form id="ticketInput">
+        <div class="form-group">
+          <label for="name">Your name:</label>
+          <input id="name" type="text" class="form-control">
+          <label for="age">Your age:</label>
+          <input id="age" type="number" class="form-control" min="1" set="1">
+        </div>
+        <div class="form-group">
+          <h2>Movie Titles</h2>
+          <input type="checkbox" name="movie-title" value="snow-white">Snow White<br>
+          <input type="checkbox" name="movie-title" value="scream">Scream<br>
+          <input type="checkbox" name="movie-title" value="Steel Magnolias">Steel Magnolias<br>
+          <input type="checkbox" name="movie-title" value="inception">Inception<br>
+          <input type="checkbox" name="movie-title" value="black-panther">Black Panther<br>
+        </div>
+        <div class="form-group">
+          <h2>Movie Times</h2>
+          <input type="checkbox" name="movie-times" value="afternoon-matinee"><br>
+          <input type="checkbox" name="movie-times" value="evening"><br>
+          <input type="checkbox" name="movie-times" value="late-night">Late Night<br>
+        </div>
+        <div class="form-group">
+          <h2>Ticket Type</h2>
+          <input type="checkbox" name="ticket-type" value="kids">Kids Admission<br>
+          <input type="checkbox" name="ticket-type" value="regular">Regular Admission<br>
+          <input type="checkbox" name="ticket-type" value="senior">Senior Admission<br>
+        </div>
+        <button type="submit" name="button">Submit!</button>
+      </form>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Hi, <span class="name"></span></div>
+      <div class="panel-body">
+        <ul id="ticket">
+          
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
