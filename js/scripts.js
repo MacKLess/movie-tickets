@@ -1,11 +1,11 @@
 //Business Logic
-function Ticket(title, time, rating, ){
+function Ticket(age, title, time){
   this.title = title;
   this.time = time;
-  this.rating = time;
-  this.price = "";
+  this.rating = age;
+  this.price = 15;
 }
-Ticket.prototype.price = function(age, time) {
+Ticket.prototype.calculation = function(age, time) {
   var price = 15;
   if (age <= 17){
     price -= 5;
@@ -32,8 +32,13 @@ function resetFields() {
 //User Interface Logic
 $(document).ready(function(){
   $("#ticketInput").submit(function(event){
-
-
+    var nameInput = $("input#name").val();
+    var ageInput = parseInt($("input#age").val());
+    var titleInput = $("#movie-title").val();
+    var timeInput = $("#movie-times").val();
+    var newTicket = new Ticket(ageInput, titleInput, timeInput);
+    var cost = newTicket.calculation(ageInput, timeInput);
+    newTicket.price() = cost;
 
     event.preventDefault();
   });
