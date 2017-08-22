@@ -5,25 +5,34 @@ function Ticket(age, title, time){
   this.rating = age;
   this.price = 15;
 }
-Ticket.prototype.calculation = function(age, time) {
-  var price = 15;
-  if (age <= 17){
-    price -= 5;
-  }
-  else if ((age >= 18) && (age <= 64)){
-    price;
-  }
-  else {
-    price -= 7;
-  }
-  if (time === 1) {
-    return price -= 2;
-  }
-  else {
-    return price;
+Ticket.prototype.translation = function(time){
+  if (time === 1){
+    return "Afternoon Matinee"
+  }else if (time === 2){
+    return "Evening Show"
+  }else {
+    return "Late Night Showing"
   }
 }
-
+Ticket.prototype.calculation = function(age, time, price) {
+  var ticketCost = 0;
+  if (age <= 17){
+    price -= 5;
+    console.log(1);
+  }else if ((age >= 18) && (age <= 64)){
+    price;
+    console.log(2);
+  }else {
+    price -= 7;
+    console.log(3);
+  }if (time === 1) {
+    price -= 2;
+    console.log("matinee");
+  }else {
+    price;
+    console.log("notmatinee");
+  }return ticketCost += price;
+}
 function resetFields() {
   $("input#name").val("");
   $("input#age").val("")
@@ -32,14 +41,19 @@ function resetFields() {
 //User Interface Logic
 $(document).ready(function(){
   $("#ticketInput").submit(function(event){
+    debugger;
     var nameInput = $("input#name").val();
     var ageInput = parseInt($("input#age").val());
     var titleInput = $("#movie-title").val();
-    var timeInput = $("#movie-times").val();
+    var timeInput = parseInt($("#movie-times").val());
     var newTicket = new Ticket(ageInput, titleInput, timeInput);
-    var cost = newTicket.calculation(ageInput, timeInput);
-    newTicket.price() = cost;
-
+    var cost = newTicket.calculation(ageInput, timeInput, newTicket.price);
+    newTicket.price = cost;
+    var showing = newTicket.translation(timeInput);
+    $(".name").text(nameInput);
+    $("#ticket").append(`<li>${titleInput}</li>`);
+    $("#ticket").append(`<li>${showing}</li>`);
+    $("#ticket").append(`<li>$${cost}</li>`);
     event.preventDefault();
   });
 });
