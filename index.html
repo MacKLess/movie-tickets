@@ -11,42 +11,44 @@
   </head>
   <body>
     <div class="container">
-      <h1>Epic Ticket Kiosk</h1>
-      <form id="ticketInput">
-        <div class="form-group">
-          <label for="name">Your name:</label>
-          <input id="name" type="text" class="form-control">
-          <label for="age">Your age:</label>
-          <input id="age" type="number" class="form-control" min="1" set="1">
-        </div>
-        <h2>Movie Titles</h2>
-        <select class="form-group" id="movie-title">
-          <option>Snow White</option>
-          <option>Black Panther</option>
-          <option>Scream</option>
-          <option>Inception</option>
-          <option>Steel Magnolias</option>
-        </select>
-        <br>
-        <h2>Movie Times</h2>
-        <select class="form-group" id="movie-times">
-          <option value="1">Afternoon Matinee</option>
-          <option value="2">Evening</option>
-          <option value="3">Late Night</option>
-        </select>
-        <br><br>
-        <button type="submit" name="button">Submit!</button>
-      </form>
-      <br>
-      <br>
-      <div class="panel panel-default">
-        <div class="panel-heading">Hi, <span class="name"></span></div>
-        <div class="panel-body">
-          <ul id="ticket">
-
-          </ul>
-        </div>
+      <div class="input">
+        <h1>~Epic Ticket Kiosk~</h1>
+        <form id="ticketInput">
+          <div id="typeIn" class="form-group">
+            <label for="name">Your name:</label>
+            <input id="name" type="text" class="form-control">
+            <label for="age">Your age:</label>
+            <input id="age" type="number" class="form-control" min="1" set="1">
+          </div>
+          <div id="selectData">
+            <h2>Movie Titles</h2>
+            <select class="form-group" id="movie-title">
+              <option>Snow White</option>
+              <option>Black Panther</option>
+              <option>Scream</option>
+              <option>Inception</option>
+              <option>Steel Magnolias</option>
+            </select>
+            <h2>Movie Times</h2>
+            <select class="form-group" id="movie-times">
+              <option value="1">Afternoon Matinee</option>
+              <option value="2">Evening</option>
+              <option value="3">Late Night</option>
+            </select>
+          </div>
+          <button type="submit" name="button">Submit!</button>
+        </form>
       </div>
+        <br>
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-heading">Hi, <span class="name"></span></div>
+          <div class="panel-body">
+            <ul id="ticket">
+
+            </ul>
+          </div>
+        </div>
     </div>
   </body>
 </html>

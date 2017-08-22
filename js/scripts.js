@@ -37,7 +37,7 @@ function resetFields() {
 $(document).ready(function(){
   $("#ticketInput").submit(function(event){
     $("#ticketInput").hide();
-    $("#panel").show();
+    $(".panel").show();
     var nameInput = $("input#name").val();
     var ageInput = parseInt($("input#age").val());
     var titleInput = $("#movie-title").val();
